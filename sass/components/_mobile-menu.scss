@@ -1,4 +1,5 @@
 .mobile-menu {
+  @extend %x-margin-centered;
   padding: 48px 40px;
 
   position: fixed;

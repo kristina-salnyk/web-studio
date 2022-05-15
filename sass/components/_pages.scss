@@ -1,3 +1,49 @@
 .pages {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  @include setForMobile {
+    display: none;
+  }
+}
+
+.pages__item {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pages__link {
+  @include setYPadding(32px);
+
+  display: block;
+
+  color: getTextColor('title');
+
+  &--current {
+    position: relative;
+    color: getAccentColor('primary');
+
+    &::after {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+
+      width: 100%;
+
+      border: 2px solid getAccentColor('primary');
+      border-radius: 2px;
+
+      background-color: getAccentColor('primary');
+    }
+  }
+}
+
+.nav__pages {
+  margin-left: auto;
 }

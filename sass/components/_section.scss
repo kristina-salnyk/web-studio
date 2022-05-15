@@ -1,5 +1,6 @@
 .section {
   @include setYPadding(60px);
+  @extend %x-margin-centered;
 
   &--padding-top {
     padding-top: 0;
@@ -14,7 +15,6 @@
   }
 
   &--hero {
-    @extend %x-margin-centered;
     @include setYPadding(118px);
 
     max-width: 480px;

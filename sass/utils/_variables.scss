@@ -3,6 +3,12 @@ $transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $primary-font: 'Roboto';
 $logo-font: 'Raleway', 'Geneva', 'Arial', sans-serif;
 
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1200px,
+);
+
 $text-colors: (
   'primary': #757575,
   'secondary': rgba(255, 255, 255, 0.6),
@@ -52,6 +58,10 @@ $shadow-colors: (
   'alpha-16': rgba(0, 0, 0, 0.16),
   'alpha-2': rgba(0, 0, 0, 0.2),
 );
+
+@function getBreakpoint($key) {
+  @return map-get($breakpoints, $key);
+}
 
 @function getBgrColor($key) {
   @return map-get($bgr-colors, $key);

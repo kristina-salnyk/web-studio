@@ -15,19 +15,13 @@
   <body>
     <!-- Header -->
     <header class="page-header">
-      <div class="container container--centered page-header__container">
+      <div class="container page-header__container container--centered">
+        <a class="logo" href="./index.html"
+          >Web<span class="logo__text logo__text--black">Studio</span>
+        </a>
+
         <!-- Navigation -->
         <nav class="nav">
-          <a class="logo" href="./index.html"
-            >Web<span class="logo__text logo__text--black">Studio</span>
-          </a>
-
-          <button class="nav__btn nav__btn--open" type="button" data-menu-open>
-            <svg class="nav__icon" width="24" height="16">
-              <use href="./images/icons.svg#menu"></use>
-            </svg>
-          </button>
-
           <!-- Pages -->
           <ul class="pages nav__pages">
             <li class="pages__item">
@@ -42,11 +36,17 @@
           </ul>
         </nav>
 
+        <button class="page-header__btn page-header__btn--open" type="button" data-menu-open>
+          <svg class="page-header__icon" width="24" height="16">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+
         <!--Connection -->
         <ul class="connection page-header__connection">
           <li class="connection__item">
             <a class="link connection__link" href="mailto:info@devstudio.com">
-              <svg class="connection__icon" width="16" height="12">
+              <svg class="connection__icon connection__icon--envelope">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -54,7 +54,7 @@
           </li>
           <li class="connection__item">
             <a class="link connection__link" href="tel:+380961111111">
-              <svg class="connection__icon" width="10" height="16">
+              <svg class="connection__icon connection__icon--smartphone">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -521,11 +521,28 @@
 
     <!-- Mobile Nav -->
     <div class="mobile-menu mobile-menu--is-hidden" data-menu>
-      <button class="mobile-menu__btn mobile-menu__btn--close" data-menu-close>
-        <svg class="mobile-menu__icon" width="18" height="18">
-          <use href="./images/icons.svg#close"></use>
-        </svg>
-      </button>
+      <div class="container container--centered">
+        <button class="mobile-menu__btn mobile-menu__btn--close" data-menu-close>
+          <svg class="mobile-menu__icon" width="18" height="18">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <!-- Pages -->
+        <nav class="nav mobile-menu__nav">
+          <ul class="pages nav__pages pages--mobile">
+            <li class="pages__item">
+              <a class="link pages__link pages__link--current" href="./index.html">Студия</a>
+            </li>
+            <li class="pages__item">
+              <a class="link pages__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="pages__item">
+              <a class="link pages__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <!-- Backdrop -->

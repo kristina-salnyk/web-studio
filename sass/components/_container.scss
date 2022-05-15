@@ -1,9 +1,25 @@
 .container {
   @include setXPadding(15px);
 
-  max-width: 480px;
-
   &--centered {
     @extend %x-margin-centered;
   }
+
+  @include setForMobile {
+    max-width: map-get($breakpoints, 'mobile');
+  }
+
+  @include setForTablet {
+    max-width: map-get($breakpoints, 'tablet');
+  }
+
+  @include setForDesktop {
+    max-width: map-get($breakpoints, 'desktop');
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
