@@ -1,0 +1,18 @@
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.17;
+
+  color: getAccentColor('primary');
+}
+
+.logo__text {
+  &--black {
+    color: getTextColor('black');
+  }
+
+  &--white {
+    color: getTextColor('white');
+  }
+}

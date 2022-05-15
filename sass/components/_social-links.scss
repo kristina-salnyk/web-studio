@@ -1,0 +1,48 @@
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-links__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.social-links__icon {
+  fill: currentColor;
+}
+
+.social-links__link {
+  @extend %flex-centered;
+
+  height: 44px;
+  width: 44px;
+
+  border-radius: 50%;
+
+  &--dinamic-fill-color {
+    color: getIconColor('primary');
+    background-color: getBgrColor('primary');
+
+    transition: background-color 250ms $transition-timing-function,
+      color 250ms $transition-timing-function;
+  }
+
+  &--static-fill-color {
+    color: getTextColor('white');
+    background-color: getIconColor('secondary');
+
+    transition: background-color 250ms $transition-timing-function;
+  }
+
+  &:hover,
+  &:focus {
+    color: getTextColor('white');
+    background-color: getAccentColor('primary');
+  }
+}
+
+.team-member__social-links {
+  margin-top: 16px;
+}

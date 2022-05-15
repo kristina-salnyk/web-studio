@@ -1,0 +1,40 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs__item {
+  &:not(:first-child) {
+    margin-left: 8px;
+  }
+}
+
+.tabs__btn {
+  padding: 6px 22px;
+
+  min-width: 73px;
+
+  font-family: getFont('primary');
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+
+  border: none;
+  border-radius: 4px;
+
+  color: getTextColor('title');
+  background-color: getBgrColor('secondary');
+
+  transition: color 250ms $transition-timing-function,
+    background-color 250ms $transition-timing-function, box-shadow 250ms $transition-timing-function;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: getTextColor('white');
+    background-color: getAccentColor('primary');
+    box-shadow: 0px 3px 1px getShadowColor('alpha-1'), 0px 1px 2px getShadowColor('alpha-08'),
+      0px 2px 2px getShadowColor('alpha-12');
+  }
+}

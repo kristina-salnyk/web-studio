@@ -1,0 +1,119 @@
+.service-order__input-fields {
+  margin-bottom: 20px;
+}
+
+.service-order__label {
+  &--text-field {
+    margin-bottom: 10px;
+
+    display: block;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  &--check {
+    @extend %flex-centered;
+  }
+}
+
+.service-order__field {
+  margin-top: 4px;
+
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.service-order__input {
+  width: 100%;
+
+  border: 1px solid getBorderColor('modal');
+  border-radius: 4px;
+
+  transition: outline-color 250ms $transition-timing-function;
+
+  &--one-line-field {
+    padding: 12px 0 12px 42px;
+  }
+
+  &--multi-line-field {
+    margin-top: 4px;
+    padding: 12px 16px;
+
+    height: 120px;
+    resize: none;
+
+    font-weight: 400;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    &::placeholder {
+      color: getTextColor('placeholder');
+    }
+  }
+
+  &:focus {
+    outline-color: getAccentColor('primary');
+  }
+}
+
+.service-order__icon {
+  &--input {
+    position: absolute;
+    top: 50%;
+    left: 21px;
+
+    transform: translate(-50%, -50%);
+    transition: fill 250ms $transition-timing-function;
+
+    .service-order__input--one-line-field:focus + & {
+      fill: getAccentColor('primary');
+    }
+  }
+
+  &--check {
+    padding: 4px 2px 3px 3px;
+    visibility: hidden;
+
+    .service-order__field--check:checked + .service-order__check > & {
+      visibility: visible;
+    }
+  }
+}
+
+.service-order__check {
+  display: inline-block;
+  margin-right: 7px;
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid getTextColor('title');
+  border-radius: 2px;
+
+  .service-order__field--check:checked + & {
+    border: none;
+    background-color: getAccentColor('primary');
+  }
+}
+
+.service-order__link {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+
+  color: getAccentColor('primary');
+}
+
+.service-order__btn {
+  margin-top: 30px;
+  @extend %x-margin-centered;
+
+  display: block;
+}
+
+.modal-window__service-order {
+  margin-top: 12px;
+}

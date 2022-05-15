@@ -1,0 +1,18 @@
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--margin-top {
+    margin-top: 50px;
+  }
+}
+
+.portfolio__item {
+  &:not(:nth-child(-n + 3)) {
+    margin-top: 30px;
+  }
+
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+}

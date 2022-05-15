@@ -1,0 +1,49 @@
+.mobile-menu {
+  padding: 48px 40px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: getBgrColor('primary');
+  box-shadow: 0px 4px 8px getShadowColor('alpha-04'), 0px 2px 4px getShadowColor('alpha-08'),
+    0px 1px 3px getShadowColor('alpha-16');
+
+  transition: transform 250ms $transition-timing-function;
+
+  &--is-hidden {
+    transform: translateX(100%);
+  }
+}
+
+.mobile-menu__btn {
+  &--close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    @extend %flex-centered;
+
+    height: 40px;
+    width: 40px;
+
+    border: none;
+
+    background: getBgrColor('primary');
+
+    transition: color 250ms $transition-timing-function;
+    cursor: pointer;
+  }
+
+  &--close:hover,
+  &--close:focus {
+    color: getAccentColor('primary');
+  }
+}
+
+.mobile-menu__icon {
+  fill: currentColor;
+}

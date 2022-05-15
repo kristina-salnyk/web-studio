@@ -1,0 +1,62 @@
+.modal-window {
+  padding: 40px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  min-width: 528px;
+
+  border-radius: 4px;
+
+  background: getBgrColor('primary');
+  box-shadow: 0px 1px 3px getShadowColor('alpha-12'), 0px 1px 1px getShadowColor('alpha-14'),
+    0px 2px 1px getShadowColor('alpha-2');
+
+  transition: transform 250ms $transition-timing-function;
+
+  .backdrop--is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal-window__btn {
+  &--close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    @extend %flex-centered;
+
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    background: getBgrColor('primary');
+
+    transition: color 250ms $transition-timing-function;
+    cursor: pointer;
+  }
+
+  &--close:hover,
+  &--close:focus {
+    border: 1px solid getBorderColor('modal');
+    color: getAccentColor('primary');
+  }
+}
+
+.modal-window__icon {
+  fill: currentColor;
+}
+
+.modal-window__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: getTextColor('title');
+}

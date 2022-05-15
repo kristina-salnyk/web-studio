@@ -1,0 +1,35 @@
+.clients {
+  margin-top: -30px;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clients__item {
+  @extend %x-margin-centered;
+  margin-top: 30px;
+}
+
+.clients__link {
+  @extend %flex-centered;
+
+  width: 210px;
+  height: 92px;
+
+  border: 1px solid getIconColor('primary');
+  border-radius: 4px;
+
+  color: getIconColor('primary');
+
+  transition: color 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    border-color: getAccentColor('primary');
+    color: getAccentColor('primary');
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

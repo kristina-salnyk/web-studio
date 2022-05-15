@@ -1,0 +1,21 @@
+.contacts {
+  line-height: 1.5;
+}
+
+.contacts__link {
+  color: getTextColor('secondary');
+
+  &--white-link {
+    color: getTextColor('white');
+  }
+}
+
+.contacts__item {
+  &:not(:first-child) {
+    margin-top: 8px;
+  }
+}
+
+.page-footer__contacts {
+  margin-top: 20px;
+}

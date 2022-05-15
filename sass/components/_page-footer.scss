@@ -1,0 +1,17 @@
+.page-footer {
+  @include setYPadding(60px);
+
+  text-align: center;
+
+  background: getBgrColor('footer');
+}
+
+.page-footer__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: getTextColor('white');
+}

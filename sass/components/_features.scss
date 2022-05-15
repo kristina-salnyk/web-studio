@@ -1,0 +1,28 @@
+.features__item {
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
+}
+
+.features__wrap {
+  @extend %flex-centered;
+
+  height: 120px;
+
+  border-radius: 4px;
+  background-color: getBgrColor('secondary');
+}
+
+.features__title {
+  margin-top: 30px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.features__descr {
+  margin-top: 10px;
+  line-height: 1.71;
+}

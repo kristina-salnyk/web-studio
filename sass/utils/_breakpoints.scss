@@ -1,0 +1,23 @@
+@mixin setForMobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin setForTabletAndDesktop {
+  @media (min-width: 481px) {
+    @content;
+  }
+}
+
+@mixin setForTablet {
+  @media (min-width: 481px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin setForDesktop {
+  @media (min-width: 769px) {
+    @content;
+  }
+}

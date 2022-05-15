@@ -1,0 +1,62 @@
+.project__label {
+  padding: 20px 24px;
+
+  border-left: 1px solid getBorderColor('card');
+  border-right: 1px solid getBorderColor('card');
+  border-bottom: 1px solid getBorderColor('card');
+}
+
+.project__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.project__descr {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+.project__link {
+  display: block;
+
+  color: inherit;
+  transition: box-shadow 250ms $transition-timing-function;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px getShadowColor('alpha-12'), 0px 4px 4px getShadowColor('alpha-06'),
+      1px 4px 6px getShadowColor('alpha-16');
+  }
+}
+
+.project__meta {
+  position: relative;
+  overflow: hidden;
+}
+
+.project__overlay {
+  padding: 63px 24px;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  @extend %stretched;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+
+  color: getTextColor('white');
+  background: getBgrColor('card-overlay');
+
+  transition: transform 250ms $transition-timing-function;
+
+  .project:hover & {
+    transform: translateY(-100%);
+  }
+}

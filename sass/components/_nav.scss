@@ -1,0 +1,23 @@
+.nav {
+  @include setYPadding(10px);
+
+  @extend %flex-space-between;
+}
+
+.nav__btn {
+  &--open {
+    padding: 12px 8px;
+
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: getAccentColor('primary');
+    }
+  }
+}
+
+.nav__icon {
+  fill: currentColor;
+}

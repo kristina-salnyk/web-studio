@@ -1,0 +1,68 @@
+.section {
+  @include setYPadding(60px);
+
+  &--padding-top {
+    padding-top: 0;
+  }
+
+  &--bgr {
+    background: getBgrColor('secondary');
+  }
+
+  &--directions {
+    display: none;
+  }
+
+  &--hero {
+    @extend %x-margin-centered;
+    @include setYPadding(118px);
+
+    max-width: 480px;
+    height: 400px;
+
+    text-align: center;
+
+    background-color: getBgrColor('hero');
+    background-image: linear-gradient(
+        to right,
+        getBgrColor('hero-overlay'),
+        getBgrColor('hero-overlay')
+      ),
+      url('../images/hero-bgr-mobile.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include setFor2x {
+      background-image: linear-gradient(
+          to right,
+          getBgrColor('hero-overlay'),
+          getBgrColor('hero-overlay')
+        ),
+        url('../images/hero-bgr-mobile@2x.jpg');
+    }
+  }
+}
+
+.section__title {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  text-align: center;
+
+  &--hero {
+    @extend %x-margin-centered;
+
+    max-width: 360px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: getTextColor('white');
+  }
+}

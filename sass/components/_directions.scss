@@ -1,0 +1,26 @@
+.directions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.directions__meta {
+  position: relative;
+}
+
+.directions__label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @include setYPadding(27px);
+
+  width: 100%;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: getTextColor('white');
+  background: getBgrColor('label');
+}

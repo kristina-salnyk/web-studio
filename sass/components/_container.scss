@@ -1,0 +1,9 @@
+.container {
+  @include setXPadding(15px);
+
+  max-width: 480px;
+
+  &--centered {
+    @extend %x-margin-centered;
+  }
+}

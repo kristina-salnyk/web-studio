@@ -1,0 +1,15 @@
+@mixin setFor2x {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin setYPadding($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+}
+
+@mixin setXPadding($value) {
+  padding-left: $value;
+  padding-right: $value;
+}

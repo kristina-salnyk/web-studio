@@ -1,0 +1,78 @@
+$transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+$primary-font: 'Roboto';
+$logo-font: 'Raleway', 'Geneva', 'Arial', sans-serif;
+
+$text-colors: (
+  'primary': #757575,
+  'secondary': rgba(255, 255, 255, 0.6),
+  'title': #212121,
+  'white': #fff,
+  'black': #000,
+  'placeholder': rgba(117, 117, 117, 0.5),
+);
+
+$bgr-colors: (
+  'primary': #fff,
+  'secondary': #f5f4fa,
+  'hero': #2f303a,
+  'footer': #2f303a,
+  'label': rgba(47, 48, 58, 0.8),
+  'backdrop': rgba(0, 0, 0, 0.2),
+  'card-overlay': rgba(33, 150, 243, 0.9),
+  'hero-overlay': rgba(47, 48, 58, 0.4),
+);
+
+$icon-colors: (
+  'primary': #afb1b8,
+  'secondary': rgba(255, 255, 255, 0.1),
+);
+
+$accent-colors: (
+  'primary': #2196f3,
+  'secondary': #188ce8,
+);
+
+$border-colors: (
+  'header': #ececec,
+  'card': #eeeeee,
+  'modal': rgba(0, 0, 0, 0.1),
+  'modal-input': rgba(33, 33, 33, 0.2),
+  'input': rgba(255, 255, 255, 0.3),
+);
+
+$shadow-colors: (
+  'alpha-04': rgba(0, 0, 0, 0.04),
+  'alpha-06': rgba(0, 0, 0, 0.06),
+  'alpha-08': rgba(0, 0, 0, 0.08),
+  'alpha-1': rgba(0, 0, 0, 0.1),
+  'alpha-12': rgba(0, 0, 0, 0.12),
+  'alpha-14': rgba(0, 0, 0, 0.14),
+  'alpha-15': rgba(0, 0, 0, 0.15),
+  'alpha-16': rgba(0, 0, 0, 0.16),
+  'alpha-2': rgba(0, 0, 0, 0.2),
+);
+
+@function getBgrColor($key) {
+  @return map-get($bgr-colors, $key);
+}
+
+@function getBorderColor($key) {
+  @return map-get($border-colors, $key);
+}
+
+@function getTextColor($key) {
+  @return map-get($text-colors, $key);
+}
+
+@function getIconColor($key) {
+  @return map-get($icon-colors, $key);
+}
+
+@function getAccentColor($key) {
+  @return map-get($accent-colors, $key);
+}
+
+@function getShadowColor($key) {
+  @return map-get($shadow-colors, $key);
+} ;
