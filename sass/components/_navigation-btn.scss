@@ -1,0 +1,21 @@
+.navigation-btn {
+  &--open-menu {
+    padding: 22px 8px;
+
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: getAccentColor('primary');
+    }
+
+    @include setForTabletAndDesktop {
+      display: none;
+    }
+  }
+}
+
+.navigation-btn__icon {
+  fill: currentColor;
+}

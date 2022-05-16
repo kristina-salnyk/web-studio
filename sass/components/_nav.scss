@@ -1,8 +1,10 @@
 .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @extend %flex-space-between;
 
   width: 100%;
   max-width: 516px;
+
+  @include setForDesktop {
+    max-width: 532px;
+  }
 }

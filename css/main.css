@@ -333,6 +333,18 @@ svg {
           justify-content: center;
 }
 
+.nav, .page-header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .mobile-menu, .service-order__btn, .subscription__btn, .clients__item, .section__title--hero, .section, .container--centered {
   margin-left: auto;
   margin-right: auto;
@@ -346,28 +358,6 @@ svg {
 .page-header {
   border-bottom: 1px solid #ececec;
   background-color: #fff;
-}
-
-.page-header__btn--open {
-  padding: 22px 8px;
-  border: none;
-  background-color: transparent;
-}
-.page-header__btn--open:hover, .page-header__btn--open:focus {
-  color: #2196f3;
-}
-@media (min-width: 481px) {
-  .page-header__btn--open {
-    display: none;
-  }
-}
-
-.page-header__icon {
-  fill: currentColor;
-}
-
-.page-header__navigation {
-  max-width: 294px;
 }
 
 .container {
@@ -390,30 +380,14 @@ svg {
   }
 }
 
-.page-header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   width: 100%;
   max-width: 516px;
+}
+@media (min-width: 769px) {
+  .nav {
+    max-width: 532px;
+  }
 }
 
 .logo {
@@ -422,6 +396,12 @@ svg {
   font-size: 24px;
   line-height: 1.17;
   color: #2196f3;
+}
+@media (min-width: 769px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__text--black {
@@ -440,9 +420,6 @@ svg {
           justify-content: space-between;
   width: 100%;
   max-width: 294px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
 }
 @media (max-width: 480px) {
   .pages {
@@ -451,8 +428,9 @@ svg {
 }
 
 .pages__item {
-  margin-left: auto;
-  margin-right: auto;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 }
 
 .pages__link {
@@ -476,15 +454,30 @@ svg {
   background-color: #2196f3;
 }
 
-.nav__pages {
-  margin-left: auto;
+@media (max-width: 480px) {
+  .connection {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .connection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 333px;
+  }
 }
 
-.connection {
+.connection__item {
   font-weight: 500;
   font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+@media (min-width: 769px) {
+  .connection__item {
+    font-size: 14px;
+  }
 }
 
 .connection__link {
@@ -501,18 +494,43 @@ svg {
   margin-right: 8px;
   fill: currentColor;
 }
+@media (min-width: 769px) {
+  .connection__icon {
+    margin-right: 10px;
+  }
+}
 
-.connection__item:not(:first-child) {
-  padding-top: 10px;
+@media (min-width: 481px) and (max-width: 768px) {
+  .connection__item:not(:first-child) {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 769px) {
+  .connection__item:not(:first-child) {
+    margin-left: 30px;
+  }
 }
 
 .connection__icon--envelope {
+  min-width: 14px;
   width: 14px;
   height: 10px;
 }
+@media (min-width: 769px) {
+  .connection__icon--envelope {
+    width: 16px;
+    height: 12px;
+  }
+}
 .connection__icon--smartphone {
+  min-width: 10px;
   width: 10px;
   height: 14px;
+}
+@media (min-width: 769px) {
+  .connection__icon--smartphone {
+    height: 16px;
+  }
 }
 
 .link {
@@ -1137,5 +1155,23 @@ svg {
 }
 
 .mobile-menu__icon {
+  fill: currentColor;
+}
+
+.navigation-btn--open-menu {
+  padding: 22px 8px;
+  border: none;
+  background-color: transparent;
+}
+.navigation-btn--open-menu:hover, .navigation-btn--open-menu:focus {
+  color: #2196f3;
+}
+@media (min-width: 481px) {
+  .navigation-btn--open-menu {
+    display: none;
+  }
+}
+
+.navigation-btn__icon {
   fill: currentColor;
 }/*# sourceMappingURL=main.css.map */

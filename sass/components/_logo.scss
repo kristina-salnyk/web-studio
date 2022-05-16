@@ -5,6 +5,11 @@
   line-height: 1.17;
 
   color: getAccentColor('primary');
+
+  @include setForDesktop {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo__text {

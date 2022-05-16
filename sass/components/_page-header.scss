@@ -2,29 +2,3 @@
   border-bottom: 1px solid getBorderColor('header');
   background-color: getBgrColor('primary');
 }
-
-.page-header__btn {
-  &--open {
-    padding: 22px 8px;
-
-    border: none;
-    background-color: transparent;
-
-    &:hover,
-    &:focus {
-      color: getAccentColor('primary');
-    }
-
-    @include setForTabletAndDesktop {
-      display: none;
-    }
-  }
-}
-
-.page-header__icon {
-  fill: currentColor;
-}
-
-.page-header__navigation {
-  max-width: 294px;
-}
