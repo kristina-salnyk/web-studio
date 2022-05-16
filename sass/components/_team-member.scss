@@ -13,12 +13,17 @@
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  @include setForDesktop {
+    padding-bottom: 30px;
+  }
 }
 
 .team-member__name {
+  margin-bottom: 10px;
   font-weight: 500;
 }
 
 .team-member__position {
-  margin-top: 10px;
+  margin-bottom: 16px;
 }

@@ -8,13 +8,23 @@
 .clients__item {
   @extend %x-margin-centered;
   margin-top: 30px;
+
+  width: 210px;
+  height: 92px;
+
+  @include setForTablet {
+    width: 226px;
+  }
+
+  @include setForDesktop {
+    width: 170px;
+  }
 }
 
 .clients__link {
   @extend %flex-centered;
 
-  width: 210px;
-  height: 92px;
+  @extend %stretched;
 
   border: 1px solid getIconColor('primary');
   border-radius: 4px;

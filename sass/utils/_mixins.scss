@@ -1,4 +1,4 @@
-@mixin setFor2x {
+@mixin setFor2xPixelRatio {
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     @content;
   }

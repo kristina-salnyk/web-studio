@@ -2,6 +2,10 @@
   @include setYPadding(60px);
   @extend %x-margin-centered;
 
+  @include setForDesktop {
+    @include setYPadding(94px);
+  }
+
   &--padding-top {
     padding-top: 0;
   }
@@ -11,13 +15,15 @@
   }
 
   &--directions {
-    display: none;
+    @include setForMobileAndTablet {
+      display: none;
+    }
   }
 
   &--hero {
     @include setYPadding(118px);
 
-    max-width: 480px;
+    max-width: map-get($breakpoints, 'mobile');
     height: 400px;
 
     text-align: center;
@@ -29,17 +35,64 @@
         getBgrColor('hero-overlay')
       ),
       url('../images/hero-bgr-mobile.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 
-    @include setFor2x {
+    @include setForTablet {
+      background-image: linear-gradient(
+          to right,
+          getBgrColor('hero-overlay'),
+          getBgrColor('hero-overlay')
+        ),
+        url('../images/hero-bgr-tablet.jpg');
+    }
+
+    @include setForDesktop {
+      background-image: linear-gradient(
+          to right,
+          getBgrColor('hero-overlay'),
+          getBgrColor('hero-overlay')
+        ),
+        url('../images/hero-bgr-desktop.jpg');
+    }
+
+    @include setFor2xPixelRatio {
       background-image: linear-gradient(
           to right,
           getBgrColor('hero-overlay'),
           getBgrColor('hero-overlay')
         ),
         url('../images/hero-bgr-mobile@2x.jpg');
+
+      @include setForTablet {
+        background-image: linear-gradient(
+            to right,
+            getBgrColor('hero-overlay'),
+            getBgrColor('hero-overlay')
+          ),
+          url('../images/hero-bgr-tablet@2x.jpg');
+      }
+
+      @include setForDesktop {
+        background-image: linear-gradient(
+            to right,
+            getBgrColor('hero-overlay'),
+            getBgrColor('hero-overlay')
+          ),
+          url('../images/hero-bgr-desktop@2x.jpg');
+      }
+    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include setForTablet {
+      max-width: map-get($breakpoints, 'tablet');
+    }
+
+    @include setForDesktop {
+      @include setYPadding(200px);
+
+      max-width: 1600px;
+      height: 600px;
     }
   }
 }
@@ -64,5 +117,12 @@
     text-transform: uppercase;
 
     color: getTextColor('white');
+
+    @include setForDesktop {
+      max-width: 696px;
+
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }

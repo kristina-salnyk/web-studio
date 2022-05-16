@@ -1,5 +1,21 @@
+.team {
+  margin-top: -30px;
+
+  @include setForTabletAndDesktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .team__item {
-  &:not(:first-child) {
-    margin-top: 30px;
+  @extend %x-margin-centered;
+  margin-top: 30px;
+
+  @include setForTablet {
+    max-width: 354px;
+  }
+
+  @include setForDesktop {
+    max-width: 270px;
   }
 }

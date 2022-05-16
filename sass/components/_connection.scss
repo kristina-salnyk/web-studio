@@ -1,22 +1,17 @@
 .connection {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
   @include setForMobile {
     display: none;
   }
 
   @include setForDesktop {
     display: flex;
-
     min-width: 333px;
-  }
-}
 
-.connection__item {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-
-  @include setForDesktop {
     font-size: 14px;
   }
 }

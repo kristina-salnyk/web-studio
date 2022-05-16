@@ -2,7 +2,10 @@
   @extend %flex-space-between;
 
   width: 100%;
-  max-width: 516px;
+
+  @include setForTablet {
+    max-width: 516px;
+  }
 
   @include setForDesktop {
     max-width: 532px;

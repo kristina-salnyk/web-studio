@@ -16,6 +16,12 @@
   }
 }
 
+@mixin setForMobileAndTablet {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+
 @mixin setForDesktop {
   @media (min-width: 769px) {
     @content;

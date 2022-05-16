@@ -1,11 +1,33 @@
+.features {
+  margin-top: -30px;
+
+  @include setForTabletAndDesktop {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
 .features__item {
-  &:not(:first-child) {
-    margin-top: 30px;
+  @extend %x-margin-centered;
+  margin-top: 30px;
+
+  @include setForTabletAndDesktop {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @include setForTablet {
+    max-width: 354px;
+  }
+
+  @include setForDesktop {
+    max-width: 270px;
   }
 }
 
 .features__wrap {
   @extend %flex-centered;
+  margin-bottom: 30px;
 
   height: 120px;
 
@@ -14,15 +36,17 @@
 }
 
 .features__title {
-  margin-top: 30px;
+  margin-bottom: 10px;
 
   font-weight: 700;
   line-height: 1.14;
-  text-align: center;
   text-transform: uppercase;
+
+  @include setForMobile {
+    text-align: center;
+  }
 }
 
 .features__descr {
-  margin-top: 10px;
   line-height: 1.71;
 }
