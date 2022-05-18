@@ -1,5 +1,10 @@
 .team {
   margin-top: -30px;
+  margin-left: -30px;
+
+  @include setForMobile {
+    margin-top: 0;
+  }
 
   @include setForTabletAndDesktop {
     display: flex;
@@ -8,14 +13,20 @@
 }
 
 .team__item {
-  @extend %x-margin-centered;
   margin-top: 30px;
+  margin-left: 30px;
 
-  @include setForTablet {
-    max-width: 354px;
+  &:first-child {
+    @include setForMobile {
+      margin-top: 0;
+    }
   }
 
-  @include setForDesktop {
-    max-width: 270px;
+  @media (min-width: (getBreakpoint('mobile') + 1px)) and (max-width: 950px) {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @media (min-width: 951px) {
+    width: calc((100% - 4 * 30px) / 4);
   }
 }

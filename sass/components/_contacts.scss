@@ -13,6 +13,10 @@
 .contacts__item {
   &:not(:first-child) {
     margin-top: 8px;
+
+    @include setForDesktop {
+      margin-top: 9px;
+    }
   }
 }
 

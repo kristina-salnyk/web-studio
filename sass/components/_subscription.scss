@@ -1,8 +1,15 @@
+.subscription {
+  @include setForDesktop {
+    display: flex;
+  }
+}
+
 .subscription__field {
   padding: 15px 0px 15px 16px;
 
   width: 100%;
 
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
 
@@ -13,11 +20,26 @@
   background-color: transparent;
 
   filter: drop-shadow(0px 4px 4px getShadowColor('alpha-15'));
+
+  @include setForMobileAndTablet {
+    max-width: 450px;
+  }
+
+  @include setForDesktop {
+    max-width: 358px;
+  }
 }
 
 .subscription__btn {
-  margin-top: 20px;
   @extend %x-margin-centered;
 
   @extend %flex-centered;
+
+  @include setForMobileAndTablet {
+    margin-top: 20px;
+  }
+
+  @include setForDesktop {
+    margin-left: 12px;
+  }
 }

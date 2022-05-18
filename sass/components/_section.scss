@@ -23,7 +23,7 @@
   &--hero {
     @include setYPadding(118px);
 
-    max-width: map-get($breakpoints, 'mobile');
+    max-width: getBreakpoint('mobile');
     height: 400px;
 
     text-align: center;
@@ -85,7 +85,7 @@
     background-size: cover;
 
     @include setForTablet {
-      max-width: map-get($breakpoints, 'tablet');
+      max-width: getBreakpoint('tablet');
     }
 
     @include setForDesktop {
@@ -104,6 +104,13 @@
   font-size: 28px;
   line-height: 1.18;
   text-align: center;
+
+  @include setForDesktop {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: 1.17;
+  }
 
   &--hero {
     @extend %x-margin-centered;

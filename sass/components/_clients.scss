@@ -1,23 +1,24 @@
 .clients {
   margin-top: -30px;
+  margin-left: -30px;
 
   display: flex;
   flex-wrap: wrap;
 }
 
 .clients__item {
-  @extend %x-margin-centered;
   margin-top: 30px;
+  margin-left: 30px;
 
-  width: 210px;
   height: 92px;
+  width: calc((100% - 2 * 30px) / 2);
 
   @include setForTablet {
-    width: 226px;
+    width: calc((100% - 3 * 30px) / 3);
   }
 
   @include setForDesktop {
-    width: 170px;
+    width: calc((100% - 6 * 30px) / 6);
   }
 }
 

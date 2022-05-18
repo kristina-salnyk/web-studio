@@ -1,5 +1,6 @@
 .features {
   margin-top: -30px;
+  margin-left: -30px;
 
   @include setForTabletAndDesktop {
     display: flex;
@@ -8,20 +9,15 @@
 }
 
 .features__item {
-  @extend %x-margin-centered;
   margin-top: 30px;
-
-  @include setForTabletAndDesktop {
-    display: flex;
-    flex-direction: column;
-  }
+  margin-left: 30px;
 
   @include setForTablet {
-    max-width: 354px;
+    width: calc((100% - 2 * 30px) / 2);
   }
 
   @include setForDesktop {
-    max-width: 270px;
+    width: calc((100% - 4 * 30px) / 4);
   }
 }
 
@@ -39,6 +35,7 @@
   margin-bottom: 10px;
 
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 

@@ -138,6 +138,7 @@
               <div class="directions__meta">
                 <img
                   class="directions__img"
+                  srcset="./images/desktop.jpg 1x, ./images/desktop@2x.jpg 2x"
                   src="./images/desktop.jpg"
                   alt="Desktop-разработка"
                   width="370"
@@ -149,10 +150,12 @@
               <div class="directions__meta">
                 <img
                   class="directions__img"
+                  srcset="./images/mobile.jpg 1x, ./images/mobile@2x.jpg 2x"
                   src="./images/mobile.jpg"
                   alt="Разработка мобильных приложений"
                   width="370"
                 />
+
                 <p class="directions__label">Мобильные приложения</p>
               </div>
             </li>
@@ -160,6 +163,7 @@
               <div class="directions__meta">
                 <img
                   class="directions__img"
+                  srcset="./images/web.jpg 1x, ./images/web@2x.jpg 2x"
                   src="./images/web.jpg"
                   alt="Web-программирование"
                   width="370"
@@ -182,11 +186,15 @@
                 <img
                   class="team-member__img"
                   srcset="
+                    ./images/product-designer-270.jpg 270w,
+                    ./images/product-designer-354.jpg 354w,
                     ./images/product-designer-450.jpg 450w,
+                    ./images/product-designer-540.jpg 540w,
+                    ./images/product-designer-708.jpg 708w,
                     ./images/product-designer-900.jpg 900w
                   "
-                  sizes="(max-width: 480px) 480px, 100vw"
-                  src="./images/product-designer-450.jpg"
+                  sizes="(max-width: 480px), (min-width: 769 px) and (max-width: 950px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 951px) 270px"
+                  src="./images/product-designer-270.jpg"
                   alt="Product Designer"
                 />
                 <div class="team-member__meta">
@@ -232,11 +240,15 @@
                 <img
                   class="team-member__img"
                   srcset="
+                    ./images/frontend-developer-270.jpg 270w,
+                    ./images/frontend-developer-354.jpg 354w,
                     ./images/frontend-developer-450.jpg 450w,
+                    ./images/frontend-developer-540.jpg 540w,
+                    ./images/frontend-developer-708.jpg 708w,
                     ./images/frontend-developer-900.jpg 900w
                   "
-                  sizes="(max-width: 480px) 480px, 100vw"
-                  src="./images/frontend-developer-450.jpg"
+                  sizes="(max-width: 480px), (min-width: 769 px) and (max-width: 950px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 951px) 270px"
+                  src="./images/frontend-developer-270.jpg"
                   alt="Frontend Developer"
                 />
                 <div class="team-member__meta">
@@ -281,9 +293,16 @@
               <div class="team-member">
                 <img
                   class="team-member__img"
-                  srcset="./images/marketing-450.jpg 450w, ./images/marketing-900.jpg 900w"
-                  sizes="(max-width: 480px) 480px, 100vw"
-                  src="./images/marketing-450.jpg"
+                  srcset="
+                    ./images/marketing-270.jpg 270w,
+                    ./images/marketing-354.jpg 354w,
+                    ./images/marketing-450.jpg 450w,
+                    ./images/marketing-540.jpg 540w,
+                    ./images/marketing-708.jpg 708w,
+                    ./images/marketing-900.jpg 900w
+                  "
+                  sizes="(max-width: 480px), (min-width: 769 px) and (max-width: 950px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 951px) 270px"
+                  src="./images/marketing-270.jpg"
                   alt="Marketing"
                 />
                 <div class="team-member__meta">
@@ -328,9 +347,16 @@
               <div class="team-member">
                 <img
                   class="team-member__img"
-                  srcset="./images/ui-designer-450.jpg 450w, ./images/ui-designer-900.jpg 900w"
-                  sizes="(max-width: 480px) 480px, 100vw"
-                  src="./images/ui-designer-450.jpg"
+                  srcset="
+                    ./images/ui-designer-270.jpg 270w,
+                    ./images/ui-designer-354.jpg 354w,
+                    ./images/ui-designer-450.jpg 450w,
+                    ./images/ui-designer-540.jpg 540w,
+                    ./images/ui-designer-708.jpg 708w,
+                    ./images/ui-designer-900.jpg 900w
+                  "
+                  sizes="(max-width: 480px), (min-width: 769 px) and (max-width: 950px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 951px) 270px"
+                  src="./images/ui-designer-270.jpg"
                   alt="UI Designer"
                 />
                 <div class="team-member__meta">
@@ -431,7 +457,7 @@
     <!-- Footer -->
     <footer class="page-footer">
       <div class="container container--centered page-footer__container">
-        <div class="association">
+        <div class="page-footer__association">
           <a class="logo" href="./index.html"
             >Web<span class="logo__text logo__text--white">Studio</span>
           </a>
@@ -461,7 +487,7 @@
         </div>
 
         <!-- Connect -->
-        <div class="connect page-footer__connect">
+        <div class="page-footer__connect">
           <p class="page-footer__title">присоединяйтесь</p>
 
           <!-- Social Links -->

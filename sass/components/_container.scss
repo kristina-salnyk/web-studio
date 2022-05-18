@@ -6,18 +6,33 @@
   }
 
   @include setForMobile {
-    max-width: map-get($breakpoints, 'mobile');
+    max-width: getBreakpoint('mobile');
   }
 
   @include setForTablet {
-    max-width: map-get($breakpoints, 'tablet');
+    max-width: getBreakpoint('tablet');
   }
 
   @include setForDesktop {
-    max-width: map-get($breakpoints, 'desktop');
+    max-width: getBreakpoint('desktop');
   }
 }
 
 .page-header__container {
   @extend %flex-space-between;
+}
+
+.page-footer__container {
+  @include setForTabletAndDesktop {
+    display: flex;
+    align-items: baseline;
+  }
+
+  @include setForTablet {
+    flex-wrap: wrap;
+  }
+
+  @include setForDesktop {
+    justify-content: space-between;
+  }
 }

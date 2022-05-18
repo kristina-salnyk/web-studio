@@ -345,7 +345,7 @@ svg {
           justify-content: space-between;
 }
 
-.mobile-menu, .service-order__btn, .subscription__btn, .clients__item, .team__item, .features__item, .section__title--hero, .section, .container--centered {
+.mobile-menu, .service-order__btn, .subscription__btn, .section__title--hero, .section, .container--centered {
   margin-left: auto;
   margin-right: auto;
 }
@@ -377,6 +377,30 @@ svg {
 @media (min-width: 769px) {
   .container {
     max-width: 1200px;
+  }
+}
+
+@media (min-width: 481px) {
+  .page-footer__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .page-footer__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (min-width: 769px) {
+  .page-footer__container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -456,6 +480,7 @@ svg {
 }
 
 .connection {
+  margin-left: auto;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.14;
@@ -648,6 +673,13 @@ svg {
   line-height: 1.18;
   text-align: center;
 }
+@media (min-width: 769px) {
+  .section__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
 .section__title--hero {
   max-width: 360px;
   font-weight: 900;
@@ -667,6 +699,7 @@ svg {
 
 .features {
   margin-top: -30px;
+  margin-left: -30px;
 }
 @media (min-width: 481px) {
   .features {
@@ -680,26 +713,16 @@ svg {
 
 .features__item {
   margin-top: 30px;
-}
-@media (min-width: 481px) {
-  .features__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+  margin-left: 30px;
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .features__item {
-    max-width: 354px;
+    width: calc((100% - 60px) / 2);
   }
 }
 @media (min-width: 769px) {
   .features__item {
-    max-width: 270px;
+    width: calc((100% - 120px) / 4);
   }
 }
 
@@ -713,6 +736,7 @@ svg {
 .features__title {
   margin-bottom: 10px;
   font-weight: 700;
+  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
@@ -730,9 +754,14 @@ svg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+.directions__item {
+  width: calc((100% - 60px) / 3);
+}
+
+.directions__item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .directions__meta {
@@ -756,6 +785,12 @@ svg {
 
 .team {
   margin-top: -30px;
+  margin-left: -30px;
+}
+@media (max-width: 480px) {
+  .team {
+    margin-top: 0;
+  }
 }
 @media (min-width: 481px) {
   .team {
@@ -769,15 +804,21 @@ svg {
 
 .team__item {
   margin-top: 30px;
+  margin-left: 30px;
 }
-@media (min-width: 481px) and (max-width: 768px) {
-  .team__item {
-    max-width: 354px;
+@media (max-width: 480px) {
+  .team__item:first-child {
+    margin-top: 0;
   }
 }
-@media (min-width: 769px) {
+@media (min-width: 481px) and (max-width: 950px) {
   .team__item {
-    max-width: 270px;
+    width: calc((100% - 60px) / 2);
+  }
+}
+@media (min-width: 951px) {
+  .team__item {
+    width: calc((100% - 120px) / 4);
   }
 }
 
@@ -851,6 +892,7 @@ svg {
 
 .clients {
   margin-top: -30px;
+  margin-left: -30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -860,17 +902,18 @@ svg {
 
 .clients__item {
   margin-top: 30px;
-  width: 210px;
+  margin-left: 30px;
   height: 92px;
+  width: calc((100% - 60px) / 2);
 }
 @media (min-width: 481px) and (max-width: 768px) {
   .clients__item {
-    width: 226px;
+    width: calc((100% - 90px) / 3);
   }
 }
 @media (min-width: 769px) {
   .clients__item {
-    width: 170px;
+    width: calc((100% - 180px) / 6);
   }
 }
 
@@ -893,8 +936,12 @@ svg {
 .page-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: center;
   background: #2f303a;
+}
+@media (max-width: 769px) {
+  .page-footer {
+    text-align: center;
+  }
 }
 
 .page-footer__title {
@@ -903,6 +950,39 @@ svg {
   line-height: 1.14;
   text-transform: uppercase;
   color: #fff;
+}
+
+@media (max-width: 769px) {
+  .page-footer__association {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 769px) {
+  .page-footer__connect {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .page-footer__connect {
+    margin-top: 60px;
+  }
+}
+
+.page-footer__subscribe {
+  width: 100%;
+}
+@media (max-width: 769px) {
+  .page-footer__subscribe {
+    margin: 60px auto 0;
+  }
+}
+@media (min-width: 769px) {
+  .page-footer__subscribe {
+    max-width: 570px;
+  }
 }
 
 .contacts {
@@ -919,22 +999,28 @@ svg {
 .contacts__item:not(:first-child) {
   margin-top: 8px;
 }
+@media (min-width: 769px) {
+  .contacts__item:not(:first-child) {
+    margin-top: 9px;
+  }
+}
 
 .page-footer__contacts {
   margin-top: 20px;
 }
 
-.page-footer__connect {
-  margin-top: 60px;
-}
-
-.page-footer__subscribe {
-  margin-top: 60px;
+@media (min-width: 769px) {
+  .subscription {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscription__field {
   padding: 15px 0px 15px 16px;
   width: 100%;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.25;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -944,9 +1030,26 @@ svg {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
+@media (max-width: 769px) {
+  .subscription__field {
+    max-width: 450px;
+  }
+}
+@media (min-width: 769px) {
+  .subscription__field {
+    max-width: 358px;
+  }
+}
 
-.subscription__btn {
-  margin-top: 20px;
+@media (max-width: 769px) {
+  .subscription__btn {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 769px) {
+  .subscription__btn {
+    margin-left: 12px;
+  }
 }
 
 .tabs {

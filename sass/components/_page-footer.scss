@@ -1,9 +1,11 @@
 .page-footer {
   @include setYPadding(60px);
 
-  text-align: center;
-
   background: getBgrColor('footer');
+
+  @include setForMobileAndTablet {
+    text-align: center;
+  }
 }
 
 .page-footer__title {
@@ -14,4 +16,34 @@
   text-transform: uppercase;
 
   color: getTextColor('white');
+}
+
+.page-footer__association {
+  @include setForMobileAndTablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.page-footer__connect {
+  @include setForMobileAndTablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include setForMobile {
+    margin-top: 60px;
+  }
+}
+
+.page-footer__subscribe {
+  width: 100%;
+
+  @include setForMobileAndTablet {
+    margin: 60px auto 0;
+  }
+
+  @include setForDesktop {
+    max-width: 570px;
+  }
 }

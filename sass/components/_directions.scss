@@ -1,6 +1,13 @@
 .directions {
   display: flex;
-  justify-content: space-between;
+}
+
+.directions__item {
+  width: calc((100% - 2 * 30px) / 3);
+}
+
+.directions__item:not(:first-child) {
+  margin-left: 30px;
 }
 
 .directions__meta {
