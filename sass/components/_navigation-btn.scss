@@ -15,7 +15,30 @@
     }
   }
 
-  &--close {
+  &--close-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    @extend %flex-centered;
+
+    height: 40px;
+    width: 40px;
+
+    border: none;
+
+    background: getBgrColor('primary');
+
+    transition: color 250ms $transition-timing-function;
+    cursor: pointer;
+  }
+
+  &--close-menu:hover,
+  &--close-menu:focus {
+    color: getAccentColor('primary');
+  }
+
+  &--close-modal {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -32,12 +55,12 @@
 
     transition: color 250ms $transition-timing-function;
     cursor: pointer;
+  }
 
-    &:hover,
-    &:focus {
-      border: 1px solid getBorderColor('modal');
-      color: getAccentColor('primary');
-    }
+  &--close-modal:hover,
+  &--close-modal:focus {
+    border: 1px solid getBorderColor('modal');
+    color: getAccentColor('primary');
   }
 }
 
