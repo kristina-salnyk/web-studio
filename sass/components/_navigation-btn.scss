@@ -14,6 +14,31 @@
       display: none;
     }
   }
+
+  &--close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    @extend %flex-centered;
+
+    height: 30px;
+    width: 30px;
+
+    border-radius: 50%;
+    border: 1px solid transparent;
+
+    background: getBgrColor('primary');
+
+    transition: color 250ms $transition-timing-function;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 1px solid getBorderColor('modal');
+      color: getAccentColor('primary');
+    }
+  }
 }
 
 .navigation-btn__icon {

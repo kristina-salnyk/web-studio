@@ -6,7 +6,8 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-  min-width: 528px;
+  width: 100%;
+  max-width: 450px;
 
   border-radius: 4px;
 
@@ -19,37 +20,10 @@
   .backdrop--is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }
-}
 
-.modal-window__btn {
-  &--close {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-
-    @extend %flex-centered;
-
-    height: 30px;
-    width: 30px;
-
-    border-radius: 50%;
-    border: 1px solid transparent;
-
-    background: getBgrColor('primary');
-
-    transition: color 250ms $transition-timing-function;
-    cursor: pointer;
+  @include setForDesktop {
+    max-width: 528px;
   }
-
-  &--close:hover,
-  &--close:focus {
-    border: 1px solid getBorderColor('modal');
-    color: getAccentColor('primary');
-  }
-}
-
-.modal-window__icon {
-  fill: currentColor;
 }
 
 .modal-window__title {

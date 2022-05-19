@@ -321,7 +321,7 @@ svg {
   overflow: hidden;
 }
 
-.mobile-menu__btn--close, .service-order__label--check, .modal-window__btn--close, .subscription__btn, .clients__link, .social-links__link, .features__wrap {
+.navigation-btn--close, .mobile-menu__btn--close, .service-order__label--check, .subscription__btn, .clients__link, .social-links__link, .features__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1239,7 +1239,8 @@ svg {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
+  width: 100%;
+  max-width: 450px;
   border-radius: 4px;
   background: #fff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1253,27 +1254,10 @@ svg {
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
 }
-
-.modal-window__btn--close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  border: 1px solid transparent;
-  background: #fff;
-  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-}
-.modal-window__btn--close:hover, .modal-window__btn--close:focus {
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #2196f3;
-}
-
-.modal-window__icon {
-  fill: currentColor;
+@media (min-width: 769px) {
+  .modal-window {
+    max-width: 528px;
+  }
 }
 
 .modal-window__title {
@@ -1291,11 +1275,23 @@ svg {
 .service-order__label--text-field {
   margin-bottom: 10px;
   display: block;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
 }
+.service-order__label--check {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 12px;
+  line-height: 1.17;
+}
+@media (min-width: 769px) {
+  .service-order__label--check {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+
 .service-order__field {
   margin-top: 4px;
   display: -webkit-box;
@@ -1367,7 +1363,7 @@ svg {
 
 .service-order__check {
   display: inline-block;
-  margin-right: 7px;
+  margin-right: 5px;
   width: 16px;
   height: 15px;
   border: 2px solid #212121;
@@ -1446,6 +1442,23 @@ svg {
   .navigation-btn--open-menu {
     display: none;
   }
+}
+.navigation-btn--close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  background: #fff;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.navigation-btn--close:hover, .navigation-btn--close:focus {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #2196f3;
 }
 
 .navigation-btn__icon {
