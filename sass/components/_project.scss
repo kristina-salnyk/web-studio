@@ -47,7 +47,6 @@
 
   display: flex;
   align-items: center;
-  justify-content: center;
 
   @extend %stretched;
 
@@ -64,11 +63,14 @@
     transform: translateY(-100%);
   }
 
+  @include setForMobile {
+    font-size: 4vw;
+  }
   @include setForTablet {
-    @include setYPadding(49px);
+    font-size: 2vw;
   }
 
-  @include setForDesktop {
-    @include setYPadding(63px);
+  @media (min-width: getBreakpoint('tablet')) and (max-width: getBreakpoint('desktop')) {
+    font-size: 1.5vw;
   }
 }
