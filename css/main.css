@@ -1451,7 +1451,6 @@ svg {
   width: 30px;
   border-radius: 50%;
   border: 1px solid transparent;
-  color: black;
   background: #fff;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1463,5 +1462,5 @@ svg {
 }
 
 .navigation-btn__icon {
-  fill: currentColor;
+  fill: black;
 }/*# sourceMappingURL=main.css.map */

@@ -28,7 +28,6 @@
     border-radius: 50%;
     border: 1px solid transparent;
 
-    color: black;
     background: getBgrColor('primary');
 
     transition: color 250ms $transition-timing-function;
@@ -43,5 +42,5 @@
 }
 
 .navigation-btn__icon {
-  fill: currentColor;
+  fill: black;
 }
