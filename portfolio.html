@@ -22,7 +22,8 @@
             >Web<span class="logo__text logo__text--black">Studio</span>
           </a>
 
-          <ul class="pages nav__pages">
+          <!-- Pages -->
+          <ul class="pages">
             <li class="pages__item">
               <a class="link pages__link" href="./index.html">Студия</a>
             </li>
@@ -35,11 +36,18 @@
           </ul>
         </nav>
 
+        <!-- Navigation Button -->
+        <button class="navigation-btn navigation-btn--open-menu" type="button" data-menu-open>
+          <svg class="navigation-btn__icon" width="24" height="16">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
+
         <!--Connection -->
-        <ul class="connection page-header__connection">
+        <ul class="connection">
           <li class="connection__item">
             <a class="link connection__link" href="mailto:info@devstudio.com">
-              <svg class="connection__icon" width="16" height="12">
+              <svg class="connection__icon connection__icon--envelope">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -47,7 +55,7 @@
           </li>
           <li class="connection__item">
             <a class="link connection__link" href="tel:+380961111111">
-              <svg class="connection__icon" width="10" height="16">
+              <svg class="connection__icon connection__icon--smartphone">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -73,16 +81,24 @@
           </ul>
 
           <!-- Projects -->
-          <ul class="portfolio portfolio--margin-top">
+          <ul class="portfolio">
             <li class="portfolio__item">
               <div class="project">
                 <a class="project__link" href="#">
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/technoquack.jpg"
+                      srcset="
+                        ./images/technoquack-354.jpg 354w,
+                        ./images/technoquack-370.jpg 370w,
+                        ./images/technoquack-450.jpg 450w,
+                        ./images/technoquack-708.jpg 708w,
+                        ./images/technoquack-740.jpg 740w,
+                        ./images/technoquack-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/technoquack-450.jpg"
                       alt="Веб-сайт проекта Технокряк"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -105,9 +121,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/football.jpg"
+                      srcset="
+                        ./images/football-354.jpg 354w,
+                        ./images/football-370.jpg 370w,
+                        ./images/football-450.jpg 450w,
+                        ./images/football-708.jpg 708w,
+                        ./images/football-740.jpg 740w,
+                        ./images/football-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/football-450.jpg"
                       alt="Постер футбольных команд"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -130,9 +154,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/seafood-restaurant.jpg"
+                      srcset="
+                        ./images/seafood-restaurant-354.jpg 354w,
+                        ./images/seafood-restaurant-370.jpg 370w,
+                        ./images/seafood-restaurant-450.jpg 450w,
+                        ./images/seafood-restaurant-708.jpg 708w,
+                        ./images/seafood-restaurant-740.jpg 740w,
+                        ./images/seafood-restaurant-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/seafood-restaurant-450.jpg"
                       alt="Логотип приложения для ресторана Seafood"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -155,9 +187,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/headphone-prime.jpg"
+                      srcset="
+                        ./images/headphone-prime-354.jpg 354w,
+                        ./images/headphone-prime-370.jpg 370w,
+                        ./images/headphone-prime-450.jpg 450w,
+                        ./images/headphone-prime-708.jpg 708w,
+                        ./images/headphone-prime-740.jpg 740w,
+                        ./images/headphone-prime-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/headphone-prime-450.jpg"
                       alt="Маркетинговые услуги по продаже техники Prime"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -180,9 +220,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/boxes.jpg"
+                      srcset="
+                        ./images/boxes-354.jpg 354w,
+                        ./images/boxes-370.jpg 370w,
+                        ./images/boxes-450.jpg 450w,
+                        ./images/boxes-708.jpg 708w,
+                        ./images/boxes-740.jpg 740w,
+                        ./images/boxes-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/boxes-450.jpg"
                       alt="Логотип с коробками для проекта Boxes"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -205,9 +253,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/inspiration.jpg"
+                      srcset="
+                        ./images/inspiration-354.jpg 354w,
+                        ./images/inspiration-370.jpg 370w,
+                        ./images/inspiration-450.jpg 450w,
+                        ./images/inspiration-708.jpg 708w,
+                        ./images/inspiration-740.jpg 740w,
+                        ./images/inspiration-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/inspiration-450.jpg"
                       alt="Веб-сайт на тему: Вдохновение не имеет границ"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -230,9 +286,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/limited-edition.jpg"
+                      srcset="
+                        ./images/limited-edition-354.jpg 354w,
+                        ./images/limited-edition-370.jpg 370w,
+                        ./images/limited-edition-450.jpg 450w,
+                        ./images/limited-edition-708.jpg 708w,
+                        ./images/limited-edition-740.jpg 740w,
+                        ./images/limited-edition-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/limited-edition-450.jpg"
                       alt="Книга издания Limited Edition"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -255,9 +319,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/lab-project.jpg"
+                      srcset="
+                        ./images/lab-project-354.jpg 354w,
+                        ./images/lab-project-370.jpg 370w,
+                        ./images/lab-project-450.jpg 450w,
+                        ./images/lab-project-708.jpg 708w,
+                        ./images/lab-project-740.jpg 740w,
+                        ./images/lab-project-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/lab-project-450.jpg"
                       alt="Бирка с логотипом LAB проекта"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -280,9 +352,17 @@
                   <div class="project__meta">
                     <img
                       class="project__img"
-                      src="./images/growing-business.jpg"
+                      srcset="
+                        ./images/growing-business-354.jpg 354w,
+                        ./images/growing-business-370.jpg 370w,
+                        ./images/growing-business-450.jpg 450w,
+                        ./images/growing-business-708.jpg 708w,
+                        ./images/growing-business-740.jpg 740w,
+                        ./images/growing-business-900.jpg 900w
+                      "
+                      sizes="(max-width: 480px) 450px, (min-width: 481px) and (max-width: 768px) 354px, (min-width: 769px) 370px"
+                      src="./images/growing-business-450.jpg"
                       alt="Приложение для проекта Growing Business"
-                      width="370"
                     />
                     <div class="project__overlay">
                       <p>
@@ -307,7 +387,7 @@
     <!-- Footer -->
     <footer class="page-footer">
       <div class="container container--centered page-footer__container">
-        <div class="association">
+        <div class="page-footer__association">
           <a class="logo" href="./index.html"
             >Web<span class="logo__text logo__text--white">Studio</span>
           </a>
@@ -337,10 +417,10 @@
         </div>
 
         <!-- Connect -->
-        <div class="connect page-footer__connect">
+        <div class="page-footer__connect">
           <p class="page-footer__title">присоединяйтесь</p>
 
-          <!-- Social links -->
+          <!-- Social Links -->
           <ul class="social-links page-footer__social-links">
             <li class="social-links__item">
               <a class="social-links__link social-links__link--static-fill-color" href="#">

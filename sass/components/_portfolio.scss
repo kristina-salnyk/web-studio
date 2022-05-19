@@ -1,18 +1,30 @@
 .portfolio {
-  display: flex;
-  flex-wrap: wrap;
+  @include setForTabletAndDesktop {
+    margin-top: -30px;
+    margin-left: -30px;
 
-  &--margin-top {
-    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
 .portfolio__item {
-  &:not(:nth-child(-n + 3)) {
+  @include setForTabletAndDesktop {
     margin-top: 30px;
+    margin-left: 30px;
   }
 
-  &:not(:nth-child(3n)) {
-    margin-right: 30px;
+  @include setForMobile {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  @include setForTablet {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @include setForDesktop {
+    width: calc((100% - 3 * 30px) / 3);
   }
 }

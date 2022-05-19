@@ -39,11 +39,15 @@
 }
 
 .project__overlay {
-  padding: 63px 24px;
+  @include setXPadding(24px);
 
   position: absolute;
   top: 100%;
   left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @extend %stretched;
 
@@ -58,5 +62,13 @@
 
   .project:hover & {
     transform: translateY(-100%);
+  }
+
+  @include setForTablet {
+    @include setYPadding(49px);
+  }
+
+  @include setForDesktop {
+    @include setYPadding(63px);
   }
 }
