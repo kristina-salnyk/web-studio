@@ -1,13 +1,16 @@
 (() => {
-  const refs = {
+  const menuRefs = {
     openMenuBtn: document.querySelector('[data-menu-open'),
     closeMenuBtn: document.querySelector('[data-menu-close]'),
     menu: document.querySelector('[data-menu]'),
   };
-  refs.openMenuBtn.addEventListener('click', toggleModal);
-  refs.closeMenuBtn.addEventListener('click', toggleModal);
+  menuRefs.openMenuBtn.addEventListener('click', toggleModal);
+  menuRefs.closeMenuBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.menu.classList.toggle('mobile-menu--is-hidden');
+    const expanded = menuRefs.openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    menuRefs.openMenuBtn.setAttribute('aria-expanded', !expanded);
+
+    menuRefs.menu.classList.toggle('mobile-menu--is-open');
   }
 })();

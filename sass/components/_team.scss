@@ -9,22 +9,22 @@
 }
 
 .team__item {
-  @include setForTabletAndDesktop {
-    margin-top: 30px;
-    margin-left: 30px;
-  }
-
   @include setForMobile {
     &:not(:first-child) {
       margin-top: 30px;
     }
   }
 
-  @media (min-width: (getBreakpoint('mobile') + 1px)) and (max-width: 950px) {
+  @include setForTabletAndDesktop {
+    margin-top: 30px;
+    margin-left: 30px;
+  }
+
+  @include setForTablet {
     width: calc((100% - 2 * 30px) / 2);
   }
 
-  @media (min-width: 951px) {
+  @include setForDesktop {
     width: calc((100% - 4 * 30px) / 4);
   }
 }

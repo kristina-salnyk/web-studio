@@ -1,4 +1,6 @@
 .backdrop {
+  padding: 93px 15px;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +11,8 @@
   background: getBgrColor('backdrop');
 
   transition: opacity 250ms $transition-timing-function;
+
+  overflow-y: scroll;
 
   &--is-hidden {
     opacity: 0;

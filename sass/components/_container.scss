@@ -10,11 +10,11 @@
   }
 
   @include setForTablet {
-    max-width: getBreakpoint('tablet');
+    width: getBreakpoint('tablet');
   }
 
   @include setForDesktop {
-    max-width: getBreakpoint('desktop');
+    width: getBreakpoint('desktop');
   }
 }
 

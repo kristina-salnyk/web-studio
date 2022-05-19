@@ -1,6 +1,6 @@
 .section {
-  @include setYPadding(60px);
   @extend %x-margin-centered;
+  @include setYPadding(60px);
 
   @include setForDesktop {
     @include setYPadding(94px);

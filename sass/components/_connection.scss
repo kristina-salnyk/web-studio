@@ -1,6 +1,4 @@
 .connection {
-  margin-left: auto;
-
   font-weight: 500;
   font-size: 12px;
   line-height: 1.14;
@@ -12,8 +10,6 @@
 
   @include setForDesktop {
     display: flex;
-    min-width: 333px;
-
     font-size: 14px;
   }
 }
@@ -46,7 +42,6 @@
 
 .connection__icon {
   &--envelope {
-    min-width: 14px;
     width: 14px;
     height: 10px;
 
@@ -57,7 +52,6 @@
   }
 
   &--smartphone {
-    min-width: 10px;
     width: 10px;
     height: 14px;
 

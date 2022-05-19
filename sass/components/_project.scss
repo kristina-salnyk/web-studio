@@ -1,6 +1,8 @@
 .project__label {
   padding: 20px 24px;
 
+  flex-grow: 1;
+
   border-left: 1px solid getBorderColor('card');
   border-right: 1px solid getBorderColor('card');
   border-bottom: 1px solid getBorderColor('card');
@@ -20,8 +22,11 @@
   line-height: 1.88;
 }
 
-.project__link {
-  display: block;
+.project {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
 
   color: inherit;
   transition: box-shadow 250ms $transition-timing-function;
@@ -63,14 +68,7 @@
     transform: translateY(-100%);
   }
 
-  @include setForMobile {
+  @media screen and (max-width: 500px) {
     font-size: 4vw;
-  }
-  @include setForTablet {
-    font-size: 2vw;
-  }
-
-  @media (min-width: getBreakpoint('tablet')) and (max-width: getBreakpoint('desktop')) {
-    font-size: 1.5vw;
   }
 }

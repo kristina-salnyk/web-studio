@@ -1,29 +1,29 @@
 @mixin setForMobile {
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     @content;
   }
 }
 
 @mixin setForTabletAndDesktop {
-  @media (min-width: 481px) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin setForTablet {
-  @media (min-width: 481px) and (max-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     @content;
   }
 }
 
 @mixin setForMobileAndTablet {
-  @media (max-width: 768px) {
+  @media screen and (max-width: 1199px) {
     @content;
   }
 }
 
 @mixin setForDesktop {
-  @media (min-width: 769px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }

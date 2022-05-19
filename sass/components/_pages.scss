@@ -23,6 +23,7 @@
 
   &--current {
     position: relative;
+
     color: getAccentColor('primary');
 
     &::after {
