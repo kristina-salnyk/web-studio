@@ -8,7 +8,12 @@ body {
 }
 
 body.modal-open {
-  overflow-y: hidden;
+  position: relative;
+
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
 }
 
 ul {

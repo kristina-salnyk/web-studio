@@ -2,8 +2,11 @@
   transition: color 250ms $transition-timing-function;
   cursor: pointer;
 
-  &--open-menu {
-    padding: 22px 8px;
+  &--mobile-menu {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 2;
 
     border: none;
     background-color: transparent;
@@ -18,23 +21,23 @@
     }
   }
 
-  &--close-menu {
-    padding: 9px 10px;
+  // &--close-menu {
+  //   padding: 9px 10px;
 
-    position: absolute;
-    top: 10px;
-    right: 15px;
+  //   position: absolute;
+  //   top: 10px;
+  //   right: 15px;
 
-    border-radius: 50%;
-    border: 1px solid transparent;
+  //   border-radius: 50%;
+  //   border: 1px solid transparent;
 
-    background: getBgrColor('primary');
-  }
+  //   background: getBgrColor('primary');
+  // }
 
-  &--close-menu:hover,
-  &--close-menu:focus {
-    color: getAccentColor('primary');
-  }
+  // &--close-menu:hover,
+  // &--close-menu:focus {
+  //   color: getAccentColor('primary');
+  // }
 
   &--close-modal {
     padding: 9px 10px;
@@ -44,15 +47,30 @@
     right: 8px;
 
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: 1px solid getBorderColor('modal');
 
     background: getBgrColor('primary');
   }
 
   &--close-modal:hover,
   &--close-modal:focus {
-    border: 1px solid getBorderColor('modal');
     color: getAccentColor('primary');
+  }
+}
+
+.navigation-btn__option {
+  &--open {
+    .mobile-menu-is-open & {
+      display: none;
+    }
+  }
+
+  &--close {
+    display: none;
+
+    .mobile-menu-is-open & {
+      display: block;
+    }
   }
 }
 

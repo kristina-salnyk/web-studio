@@ -19,7 +19,7 @@
 }
 
 .page-header__container {
-  @extend %flex-space-between;
+  position: relative;
 }
 
 .page-footer__container {
