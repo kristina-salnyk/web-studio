@@ -1,8 +1,13 @@
 .connection {
   font-weight: 500;
+  letter-spacing: 0.02em;
+
+  color: getTextColor('primary');
+}
+
+.page-header__connection {
   font-size: 12px;
   line-height: 1.14;
-  letter-spacing: 0.02em;
 
   @include setForMobile {
     display: none;
@@ -14,11 +19,21 @@
   }
 }
 
-.connection__link {
+.mobile-menu__connection {
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
 
+  font-size: 24px;
+  line-height: 1.17;
+}
+
+.connection__link {
   color: getTextColor('primary');
+
+  &--header {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .connection__icon {
@@ -28,19 +43,7 @@
   @include setForDesktop {
     margin-right: 10px;
   }
-}
 
-.connection__item:not(:first-child) {
-  @include setForTablet {
-    margin-top: 10px;
-  }
-
-  @include setForDesktop {
-    margin-left: 30px;
-  }
-}
-
-.connection__icon {
   &--envelope {
     width: 14px;
     height: 10px;
@@ -58,5 +61,26 @@
     @include setForDesktop {
       height: 16px;
     }
+  }
+}
+
+.connection__item {
+  &--header:not(:first-child) {
+    @include setForTablet {
+      margin-top: 10px;
+    }
+
+    @include setForDesktop {
+      margin-left: 30px;
+    }
+  }
+
+  &--mobile:not(:last-child) {
+    margin-top: 32px;
+  }
+
+  &--mobile:last-child {
+    font-size: 34px;
+    line-height: 1.18;
   }
 }

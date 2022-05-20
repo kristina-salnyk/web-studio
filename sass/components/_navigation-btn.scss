@@ -1,4 +1,7 @@
 .navigation-btn {
+  transition: color 250ms $transition-timing-function;
+  cursor: pointer;
+
   &--open-menu {
     padding: 22px 8px;
 
@@ -16,21 +19,16 @@
   }
 
   &--close-menu {
+    padding: 9px 10px;
+
     position: absolute;
     top: 10px;
     right: 15px;
 
-    @extend %flex-centered;
-
-    height: 40px;
-    width: 40px;
-
-    border: none;
+    border-radius: 50%;
+    border: 1px solid transparent;
 
     background: getBgrColor('primary');
-
-    transition: color 250ms $transition-timing-function;
-    cursor: pointer;
   }
 
   &--close-menu:hover,
@@ -39,22 +37,16 @@
   }
 
   &--close-modal {
+    padding: 9px 10px;
+
     position: absolute;
     top: 8px;
     right: 8px;
-
-    @extend %flex-centered;
-
-    height: 30px;
-    width: 30px;
 
     border-radius: 50%;
     border: 1px solid transparent;
 
     background: getBgrColor('primary');
-
-    transition: color 250ms $transition-timing-function;
-    cursor: pointer;
   }
 
   &--close-modal:hover,

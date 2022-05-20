@@ -1,6 +1,7 @@
 .link {
   transition: color 250ms $transition-timing-function;
 
+  &--accent,
   &:hover,
   &:focus {
     color: getAccentColor('primary');
