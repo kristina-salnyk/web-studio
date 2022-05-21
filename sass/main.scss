@@ -1,10 +1,10 @@
 @import './utils/variables';
+@import './utils/breakpoints';
 @import './utils/modern-normalize';
 @import './utils/style-reset';
 @import './utils/visually-hidden';
 @import './utils/mixins';
 @import './utils/placeholders';
-@import './utils/breakpoints';
 
 @import './components/page-header';
 @import './components/container';
