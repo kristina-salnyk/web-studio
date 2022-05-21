@@ -16,52 +16,61 @@
     <!-- Header -->
     <header class="page-header">
       <div class="container container--centered page-header__container">
-        <!-- Navigation -->
         <nav class="nav">
           <a class="logo" href="./index.html"
             >Web<span class="logo__text logo__text--black">Studio</span>
           </a>
 
-          <!-- Pages -->
-          <ul class="pages">
-            <li class="pages__item">
-              <a class="link pages__link" href="./index.html">Студия</a>
-            </li>
-            <li class="pages__item">
-              <a class="link pages__link pages__link--current" href="./portfolio.html">Портфолио</a>
-            </li>
-            <li class="pages__item">
-              <a class="link pages__link" href="#">Контакты</a>
-            </li>
-          </ul>
+          <button
+            class="navigation-btn navigation-btn--mobile-menu"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            data-menu-button
+          >
+            <svg class="navigation-btn__icon" width="40" height="40" aria-label="Open mobile menu">
+              <use class="navigation-btn__option--open" href="./images/icons.svg#open-menu"></use>
+              <use class="navigation-btn__option--close" href="./images/icons.svg#close-menu"></use>
+            </svg>
+          </button>
+
+          <div class="nav__container" id="mobile-menu" data-menu>
+            <!-- Pages -->
+            <ul class="pages">
+              <li class="pages__item">
+                <a class="link pages__link" href="./index.html"> Студия </a>
+              </li>
+              <li class="pages__item">
+                <a class="link pages__link pages__link--current" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="pages__item">
+                <a class="link pages__link" href="#">Контакты</a>
+              </li>
+            </ul>
+
+            <!--Connection -->
+            <ul class="connection">
+              <li class="connection__item">
+                <a class="link connection__link" href="mailto:info@devstudio.com">
+                  <svg class="connection__icon connection__icon--envelope">
+                    <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com
+                </a>
+              </li>
+              <li class="connection__item">
+                <a class="link link--accent connection__link" href="tel:+380961111111">
+                  <svg class="connection__icon connection__icon--smartphone">
+                    <use href="./images/icons.svg#smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <!-- Navigation Button -->
-        <button class="navigation-btn navigation-btn--open-menu" type="button" data-menu-open>
-          <svg class="navigation-btn__icon" width="24" height="16">
-            <use href="./images/icons.svg#menu"></use>
-          </svg>
-        </button>
-
-        <!--Connection -->
-        <ul class="connection">
-          <li class="connection__item">
-            <a class="link connection__link" href="mailto:info@devstudio.com">
-              <svg class="connection__icon connection__icon--envelope">
-                <use href="./images/icons.svg#envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="connection__item">
-            <a class="link connection__link" href="tel:+380961111111">
-              <svg class="connection__icon connection__icon--smartphone">
-                <use href="./images/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
 
@@ -457,5 +466,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

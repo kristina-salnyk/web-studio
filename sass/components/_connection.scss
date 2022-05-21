@@ -3,34 +3,32 @@
   letter-spacing: 0.02em;
 
   color: getTextColor('primary');
-}
 
-.page-header__connection {
-  font-size: 12px;
-  line-height: 1.14;
-
-  @include setForMobile {
-    display: none;
+  @include setForTabletAndDesktop {
+    font-size: 12px;
+    line-height: 1.14;
   }
 
   @include setForDesktop {
     display: flex;
     font-size: 14px;
   }
-}
 
-.mobile-menu__connection {
-  display: flex;
-  flex-direction: column-reverse;
+  @include setForMobile {
+    margin-top: auto;
 
-  font-size: 24px;
-  line-height: 1.17;
+    display: flex;
+    flex-direction: column-reverse;
+
+    font-size: 24px;
+    line-height: 1.17;
+  }
 }
 
 .connection__link {
   color: getTextColor('primary');
 
-  &--header {
+  @include setForTabletAndDesktop {
     display: flex;
     align-items: center;
   }
@@ -39,6 +37,10 @@
 .connection__icon {
   margin-right: 8px;
   fill: currentColor;
+
+  @include setForMobile {
+    display: none;
+  }
 
   @include setForDesktop {
     margin-right: 10px;
@@ -65,7 +67,7 @@
 }
 
 .connection__item {
-  &--header:not(:first-child) {
+  &:not(:first-child) {
     @include setForTablet {
       margin-top: 10px;
     }
@@ -75,12 +77,16 @@
     }
   }
 
-  &--mobile:not(:last-child) {
-    margin-top: 32px;
+  &:not(:last-child) {
+    @include setForMobile {
+      margin-top: 32px;
+    }
   }
 
-  &--mobile:last-child {
-    font-size: 34px;
-    line-height: 1.18;
+  &:last-child {
+    @include setForMobile {
+      font-size: 34px;
+      line-height: 1.18;
+    }
   }
 }

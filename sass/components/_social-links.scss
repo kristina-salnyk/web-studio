@@ -7,6 +7,16 @@
   &:not(:last-child) {
     margin-right: 10px;
   }
+
+  &--mobile-menu:not(:first-child) {
+    padding-left: 10px;
+
+    border-left: 1px solid getBorderColor('modal-input');
+  }
+
+  &--mobile-menu:not(:last-child) {
+    padding-right: 10px;
+  }
 }
 
 .social-links__icon {
@@ -40,5 +50,22 @@
   &:focus {
     color: getTextColor('white');
     background-color: getAccentColor('primary');
+  }
+}
+
+.mobile-menu__social-links {
+  margin-top: 64px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+
+  letter-spacing: 0.02em;
+
+  @include setForTabletAndDesktop {
+    display: none;
   }
 }

@@ -3,30 +3,26 @@
 
   font-weight: 500;
   letter-spacing: 0.02em;
-}
 
-.page-header__pages {
-  justify-content: space-between;
+  @include setForTabletAndDesktop {
+    justify-content: space-between;
 
-  width: 100%;
-  max-width: 294px;
+    width: 100%;
+    max-width: 294px;
 
-  line-height: 1.14;
+    line-height: 1.14;
+  }
 
   @include setForMobile {
-    display: none;
+    flex-direction: column;
+
+    font-size: 40px;
+    line-height: 1.18;
   }
 }
 
-.mobile-menu__pages {
-  flex-direction: column;
-
-  font-size: 40px;
-  line-height: 1.18;
-}
-
 .pages__item {
-  &--mobile {
+  @include setForMobile {
     margin-bottom: 32px;
   }
 }
@@ -36,34 +32,36 @@
 
   color: getTextColor('title');
 
-  &--header {
+  @include setForTabletAndDesktop {
     @include setYPadding(32px);
 
     color: getTextColor('title');
   }
 
-  &--header-current {
-    position: relative;
+  &--current {
+    @include setForTabletAndDesktop {
+      position: relative;
 
-    color: getAccentColor('primary');
+      color: getAccentColor('primary');
 
-    &::after {
-      content: '';
+      &::after {
+        content: '';
 
-      position: absolute;
-      left: 0;
-      bottom: -1px;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
 
-      width: 100%;
+        width: 100%;
 
-      border: 2px solid getAccentColor('primary');
-      border-radius: 2px;
+        border: 2px solid getAccentColor('primary');
+        border-radius: 2px;
 
-      background-color: getAccentColor('primary');
+        background-color: getAccentColor('primary');
+      }
     }
-  }
 
-  &--mobile-current {
-    color: getAccentColor('primary');
+    @include setForMobile {
+      color: getAccentColor('primary');
+    }
   }
 }

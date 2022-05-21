@@ -1,9 +1,14 @@
 .link {
   transition: color 250ms $transition-timing-function;
 
-  &--accent,
   &:hover,
   &:focus {
     color: getAccentColor('primary');
+  }
+
+  &--accent {
+    @include setForMobile {
+      color: getAccentColor('primary');
+    }
   }
 }
