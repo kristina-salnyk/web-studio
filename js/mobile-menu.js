@@ -1,6 +1,6 @@
 (() => {
   const menuRefs = {
-    menuBtn: document.querySelector('[data-menu-button'),
+    menuBtn: document.querySelector('[data-menu-button]'),
     menu: document.querySelector('[data-menu]'),
   };
   menuRefs.menuBtn.addEventListener('click', toggleMenu);
