@@ -59,3 +59,12 @@ To run the project locally, follow these steps:
   open index.html
 ```
 
+## Deployment
+
+The project is deployed and can be accessed at [WebStudio](https://kristina-salnyk.github.io/web-studio/) page.
+This live deployment provides you with the opportunity to interact with the project in a real-world environment,
+showcasing its responsive design, interactive elements, and overall user interface.
+
+Feel free to explore the project by visiting the provided link.
+
+
