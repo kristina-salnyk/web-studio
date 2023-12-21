@@ -31,12 +31,12 @@
 
   border-radius: 50%;
 
-  &--dinamic-fill-color {
+  &--dynamic-fill-color {
     color: getIconColor('primary');
     background-color: getBgrColor('primary');
 
     transition: background-color 250ms $transition-timing-function,
-      color 250ms $transition-timing-function;
+    color 250ms $transition-timing-function;
   }
 
   &--static-fill-color {
