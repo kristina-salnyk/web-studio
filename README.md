@@ -1,4 +1,4 @@
-# WebStudio Landing Page
+# WebStudio
 
 This project is a responsive landing page that has been meticulously crafted to meet specific design and development
 requirements. The implementation adheres to best practices in HTML, CSS, and JavaScript, ensuring a seamless user
